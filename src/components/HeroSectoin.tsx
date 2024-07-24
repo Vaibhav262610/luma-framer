@@ -441,7 +441,7 @@ const HeroSectoin = () => {
         className=" -top-40 left-0 md:left-60 md:-top-20"
         fill="gray"
       />
-      <div className="xl:h-screen md:h-fit h-[200vh] w-full flex xl:flex-row flex-col justify-evenly items-center">
+      <div className="xl:h-screen md:h-fit h-[200vh] w-full flex xl:flex-row flex-col justify-center items-center">
         <div className=" flex flex-col mt-12 gap-4">
           <div
             data-aos="fade-up"
