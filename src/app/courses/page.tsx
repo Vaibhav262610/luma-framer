@@ -32,7 +32,6 @@ const Page = () => {
       </div>
       <div className="relative ">
         <motion.img
-          draggable = {true}
           data-aos="zoom-in"
           className=" cursor-grab absolute z-50 top-[50vh] right-[50vh] w-36"
           src="https://framerusercontent.com/images/YMQr3A29sQDnKCdgHPJEvp0iCU.png?scale-down-to=1024"
