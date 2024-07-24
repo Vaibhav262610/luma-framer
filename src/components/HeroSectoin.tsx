@@ -7,7 +7,6 @@ import { AnimatedTooltip } from "./ui/animated-tooltip";
 import { Meteors } from "./ui/meteors";
 import { Spotlight } from "./ui/Spotlight";
 import { World } from "./ui/globe";
-import { motion } from "framer-motion";
 
 const HeroSectoin = () => {
   useEffect(() => {
@@ -446,15 +445,13 @@ const HeroSectoin = () => {
           >
             <h2>Courses/Membershpi Template</h2>
           </div>
-          <motion.h1
-            drag
-            dragSnapToOrigin={true}
+          <h1
             data-aos="fade-up"
             data-aos-duration="500"
             className="text-5xl font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400"
           >
             Unlock Your Potential.
-          </motion.h1>
+          </h1>
           <h1
             data-aos="fade-up"
             data-aos-duration="500"
@@ -498,7 +495,7 @@ const HeroSectoin = () => {
           data-aos="zoom-in"
           className="w-[40rem] h-[40rem] cursor-grab grayscale z-0"
         >
-          <World data={sampleArcs} globeConfig={globeConfig} />
+          {/* <World data={sampleArcs} globeConfig={globeConfig} /> */}
         </div>
       </div>
     </>

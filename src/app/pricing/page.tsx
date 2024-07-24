@@ -121,7 +121,7 @@ const Page = () => {
                   <h1 className="text-gray-200 text-md uppercase font-medium ">
                     {val.data}
                   </h1>
-                  <h1 className="text-4xl font-semibold">
+                  <h1 className="text-4xl text-white font-semibold">
                     $ {billing ? val.yearlyPrice : val.price} /{" "}
                     {billing ? yearly : monthly}
                   </h1>

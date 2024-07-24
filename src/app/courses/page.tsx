@@ -69,8 +69,8 @@ const Page = () => {
             className="font-normal flex gap-2 items-center"
           >
             <h1 className="font-normal text-zinc-300">Home</h1>
-            <FaArrowRightLong className="text-sm" />
-            <h1 className="text-white">Courses</h1>
+            <FaArrowRightLong className="text-white text-sm" />
+            <h1 className="text-white font-medium">Courses</h1>
           </div>
           <h1
             data-aos="fade-up"
@@ -78,7 +78,10 @@ const Page = () => {
           >
             Browse All Our Courses
           </h1>
-          <h2 data-aos="fade-up" className="tracking-wider text-center w-9/12">
+          <h2
+            data-aos="fade-up"
+            className="tracking-wider text-zinc-300 text-center w-9/12"
+          >
             Check out our World Class Courses Below. From Web Design to Video
             Editing you ll find all kinds of Courses.
           </h2>
@@ -119,7 +122,7 @@ const Page = () => {
                     </div>
                   </div>
                   <div>
-                    <h1 className="text-xl font-medium">{val.title}</h1>
+                    <h1 className="text-xl font-medium text-white">{val.title}</h1>
                   </div>
                   <div className="flex gap-3 items-center text-md font-medium text-zinc-300">
                     <div className=" flex justify-center items-center w-9 h-9 overflow-hidden rounded-full border-2">

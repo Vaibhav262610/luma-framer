@@ -74,7 +74,9 @@ const CourseCategory = () => {
               >
                 <div className="font-black text-2xl mb-12">{val.icon}</div>
                 <h1 className="text-2xl font-medium ">{val.title}</h1>
-                <h2 className="md:w-auto w-[13rem] text-sm text-zinc-400">{val.desc}</h2>
+                <h2 className="md:w-auto w-[13rem] text-sm text-zinc-400">
+                  {val.desc}
+                </h2>
               </div>
             );
           })}

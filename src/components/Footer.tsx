@@ -112,7 +112,7 @@ const Footer = () => {
         </div>
         <div>
           <h1 className="text-zinc-400 text-sm">
-            Made with 💖 by{" "}
+            Made  💖 by{" "}
             <span className="font-bold text-white">Vaibhav Rajpoot</span>
           </h1>
         </div>

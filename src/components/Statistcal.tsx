@@ -1,9 +1,7 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-
 const Statistcal = () => {
- 
   return (
     <>
       <div className="h-screen w-full flex justify-center items-center ">
@@ -14,8 +12,8 @@ const Statistcal = () => {
               Statistical Evaluation
             </h1>
             <h2 className="text-zinc-300 text-lg w-[30rem] leading-8">
-              We&apos;ve achieved a lot over the past year helping people across the
-              Globe.
+              We&apos;ve achieved a lot over the past year helping people across
+              the Globe.
             </h2>
             <div className="border w-[10rem] mt-4 border-zinc-800"></div>
             <div className="flex flex-col gap-5 mt-8">

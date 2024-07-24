@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   Accordion,
   AccordionContent,
@@ -39,7 +40,7 @@ const AccordinCards = () => {
             >
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
-                  <AccordionTrigger>{val.question}</AccordionTrigger>
+                  <AccordionTrigger className="text-white">{val.question}</AccordionTrigger>
                   <hr className="border-zinc-700" />
                   <AccordionContent className="mt-4 text-zinc-400 text-md">
                     {val.answer}

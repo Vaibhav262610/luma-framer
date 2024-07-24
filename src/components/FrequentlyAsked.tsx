@@ -12,7 +12,7 @@ const FrequentlyAsked = () => {
           <h1 className="uppercase font-bold tracking-wider text-xs text-emerald-300">
             AMAZING BENEFITS
           </h1>
-          <h1 className="text-4xl">Stunning Benefits of our Courses</h1>
+          <h1 className="text-4xl text-white">Stunning Benefits of our Courses</h1>
           <h2 className="text-zinc-300 text-md w-[30rem] text-center">
             Explore the incredible advantages of enrolling in our courses and
             enhancing your skills.
