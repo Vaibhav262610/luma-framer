@@ -3,6 +3,7 @@ import { CiClock2 } from "react-icons/ci";
 import { FaArrowRightLong, FaStar } from "react-icons/fa6";
 import { GrNotes } from "react-icons/gr";
 import Courses from "@/data/courses";
+import Link from "next/link";
 
 const LatestCourses = () => {
   const courseData = Courses.filter((item, index) => index < 3);
@@ -27,13 +28,15 @@ const LatestCourses = () => {
                 className="border-2 bg-zinc-900/70 border-zinc-800 rounded-xl py-4 px-4 "
               >
                 <div className="flex flex-col gap-4">
-                  <div className="">
-                    <img
-                      className="w-[20rem] h-[14rem] object-cover rounded-xl border-2 border-zinc-800"
-                      src={val.image}
-                      alt="not found"
-                    />
-                  </div>
+                  <Link href={`/courses`}>
+                    <div className="">
+                      <img
+                        className="w-[20rem] h-[14rem] object-cover rounded-xl border-2 border-zinc-800"
+                        src={val.image}
+                        alt="not found"
+                      />
+                    </div>
+                  </Link>
                   <div className="flex items-center justify-between mt-3">
                     <div className="flex gap-1">
                       <FaStar className="fill-emerald-300 text-sm" />
@@ -52,7 +55,9 @@ const LatestCourses = () => {
                     </div>
                   </div>
                   <div>
-                    <h1 className="text-xl font-medium text-white">{val.title}</h1>
+                    <h1 className="text-xl font-medium text-white">
+                      {val.title}
+                    </h1>
                   </div>
                   <div className="flex gap-3 items-center text-md font-medium text-zinc-300">
                     <div className=" flex justify-center items-center w-9 h-9 overflow-hidden rounded-full border-2">
@@ -79,11 +84,13 @@ const LatestCourses = () => {
                       <h1>{val.lessons}</h1>
                     </div>
                   </div>
-                  <div className="flex bg-emerald-300 w-full cursor-pointer font-semibold gap-20 justify-end px-4 py-2 rounded-md text-black items-center">
-                    {/* <FaArrowRightLong className="hidden" /> */}
-                    <button className="text-center">View Courses</button>
-                    <FaArrowRightLong />
-                  </div>
+                  <Link href={`/courses`}>
+                    <div className="flex bg-emerald-300 w-full cursor-pointer font-semibold gap-20 justify-end px-4 py-2 rounded-md text-black items-center">
+                      {/* <FaArrowRightLong className="hidden" /> */}
+                      <button className="text-center">View Courses</button>
+                      <FaArrowRightLong />
+                    </div>
+                  </Link>
                 </div>
               </div>
             );

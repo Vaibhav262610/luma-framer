@@ -8,6 +8,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 import { Meteors } from "./ui/meteors";
 import { Spotlight } from "./ui/Spotlight";
+import Link from "next/link";
 
 const HeroSectoin = () => {
   useEffect(() => {
@@ -474,14 +475,16 @@ const HeroSectoin = () => {
             Utilize FramerAuth and LemonSqueezy for seamless integration & user
             experience.
           </p>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="500"
-            className="flex cursor-pointer bg-emerald-400 font-semibold w-fit px-4 py-2 rounded-md text-black items-center gap-2"
-          >
-            <button>Explore Our Courses</button>
-            <FaArrowRightLong />
-          </div>
+          <Link href="/courses">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="500"
+              className="flex cursor-pointer bg-emerald-400 font-semibold w-fit px-4 py-2 rounded-md text-black items-center gap-2"
+            >
+              <button>Explore Our Courses</button>
+              <FaArrowRightLong />
+            </div>
+          </Link>
           {/* <div className="flex"> */}
           <div
             data-aos="fade-up"

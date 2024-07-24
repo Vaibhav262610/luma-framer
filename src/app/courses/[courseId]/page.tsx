@@ -5,6 +5,8 @@ import Courses from "@/data/courses";
 import Link from "next/link";
 import { CiClock2 } from "react-icons/ci";
 import { GrNotes } from "react-icons/gr";
+import { GoVideo } from "react-icons/go";
+import Footer from "@/components/Footer";
 
 const page = ({ params }: { params: { courseId: number } }) => {
   const courseData = Courses[params.courseId - 1];
@@ -12,7 +14,7 @@ const page = ({ params }: { params: { courseId: number } }) => {
   return (
     <>
       <Navbar />
-      <div className="h-fit pt-40 flex-col text-white w-full flex justify-center items-center">
+      <div className="h-fit py-40  flex-col text-white w-full flex justify-center items-center">
         <div className="flex justify-between w-8/12">
           <Link href="/courses">
             <div className="flex duration-200 hover:text-zinc-400 items-center gap-3">
@@ -91,7 +93,10 @@ const page = ({ params }: { params: { courseId: number } }) => {
                       </div>
                     </Link>
                     <Link href="#">
-                      <h1>Access Lessons</h1>
+                      <div className="border rounded-lg flex items-center gap-2 py-2 px-6 border-zinc-700">
+                        <h1 className="text-sm">Access Lessons</h1>
+                        <GoVideo className="text-zinc-400" />
+                      </div>
                     </Link>
                   </div>
                 </div>
@@ -100,6 +105,7 @@ const page = ({ params }: { params: { courseId: number } }) => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

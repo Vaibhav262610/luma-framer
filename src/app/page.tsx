@@ -8,7 +8,6 @@ import LatestCourses from "@/components/LatestCourses";
 import Navbar from "@/components/Navbar";
 import Statistcal from "@/components/Statistcal";
 
-
 export default function Home() {
   return (
     <>
