@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import { FaArrowRightLong, FaStar } from "react-icons/fa6";
 import { GrNotes } from "react-icons/gr";
 import { CiClock2 } from "react-icons/ci";
+import Link from "next/link";
 
 const Page = () => {
   useEffect(() => {
@@ -97,13 +98,15 @@ const Page = () => {
                 className="border-2 bg-zinc-900/70 border-zinc-800 rounded-xl py-4 px-4 "
               >
                 <div className="flex flex-col gap-4">
-                  <div className="">
-                    <img
-                      className="w-[20rem] h-[14rem] object-cover rounded-xl border-2 border-zinc-800"
-                      src={val.image}
-                      alt="not found"
-                    />
-                  </div>
+                  <Link href={`/courses/${val.id}`}>
+                    <div className="hover:opacity-70 duration-200">
+                      <img
+                        className="w-[20rem] h-[14rem] object-cover rounded-xl border-2 border-zinc-800"
+                        src={val.image}
+                        alt="not found"
+                      />
+                    </div>
+                  </Link>
                   <div className="flex items-center justify-between mt-3">
                     <div className="flex gap-1">
                       <FaStar className="fill-emerald-300 text-sm" />
@@ -121,9 +124,13 @@ const Page = () => {
                       </p>
                     </div>
                   </div>
-                  <div>
-                    <h1 className="text-xl font-medium text-white">{val.title}</h1>
-                  </div>
+                  <Link href={`/courses/${val.id}`}>
+                    <div>
+                      <h1 className="text-xl hover:text-zinc-400 duration-200 font-medium text-white">
+                        {val.title}
+                      </h1>
+                    </div>
+                  </Link>
                   <div className="flex gap-3 items-center text-md font-medium text-zinc-300">
                     <div className=" flex justify-center items-center w-9 h-9 overflow-hidden rounded-full border-2">
                       <img
@@ -149,11 +156,13 @@ const Page = () => {
                       <h1>{val.lessons}</h1>
                     </div>
                   </div>
-                  <div className="flex cursor-pointer bg-emerald-300 w-full font-semibold gap-20 justify-end px-4 py-2 rounded-md text-black items-center">
-                    {/* <FaArrowRightLong className="hidden" /> */}
-                    <button className="text-center">View Courses</button>
-                    <FaArrowRightLong />
-                  </div>
+                  <Link href={`/courses/${val.id}`}>
+                    <div className="flex cursor-pointer bg-emerald-300 w-full font-semibold gap-20 justify-end px-4 py-2 rounded-md text-black items-center">
+                      {/* <FaArrowRightLong className="hidden" /> */}
+                      <button className="text-center">View Courses</button>
+                      <FaArrowRightLong />
+                    </div>
+                  </Link>
                 </div>
               </div>
             );
