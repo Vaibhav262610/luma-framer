@@ -1,4 +1,6 @@
 "use client";
+
+import dynamic from "next/dynamic";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -6,12 +8,14 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 import { Meteors } from "./ui/meteors";
 import { Spotlight } from "./ui/Spotlight";
-import { World } from "./ui/globe";
 
 const HeroSectoin = () => {
   useEffect(() => {
     AOS.init({ once: true });
   }, []);
+  const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
+    ssr: false,
+  });
 
   const people = [
     {
@@ -495,7 +499,7 @@ const HeroSectoin = () => {
           data-aos="zoom-in"
           className="w-[40rem] h-[40rem] cursor-grab grayscale z-0"
         >
-          {/* <World data={sampleArcs} globeConfig={globeConfig} /> */}
+          <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
     </>
