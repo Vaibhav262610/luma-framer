@@ -90,7 +90,7 @@ const page = () => {
             className="text-zinc-400 w-[29rem] tracking-wide "
           >
             Need some assistance? Feel free to send us a message using this
-            form, and we'll respond promptly!
+            form, and we&apos;ll respond promptly!
           </p>
           <div className="w-20 font-bold h-1 rounded-lg mt-4 bg-emerald-400"></div>
           <div>
