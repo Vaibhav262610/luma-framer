@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { motion } from "framer-motion";
@@ -10,10 +10,12 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import Footer from "@/components/Footer";
 import { FaArrowRightLong, FaStar } from "react-icons/fa6";
 import { GrNotes } from "react-icons/gr";
-import { CiClock2 } from "react-icons/ci";
+import { CiClock2, CiSearch } from "react-icons/ci";
 import Link from "next/link";
 
 const Page = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -88,10 +90,34 @@ const Page = () => {
           </h2>
         </div>
       </div>
-      <div className="h-fit w-full py-40 flex flex-col justify-center items-center">
-        <div></div>
+      <div className="h-fit w-full py-40 gap-8 flex flex-col justify-between items-center">
+        <div className="flex gap-72 justify-around w-full items-center text-white">
+          <h1 className="text-xl text-zinc-300 font-medium">All Courses</h1>
+          <div className="flex bg-zinc-900 border-[1px] border-zinc-700 rounded-md cursor-pointer items-center gap-2 px-[6px] py-1 ">
+            <CiSearch className="text-lg text-white font-bold" />
+            <input
+              type="text"
+              id="search"
+              autoComplete="off"
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="bg-transparent outline-none text-zinc-400 py-1 px-2"
+              placeholder="Search Courses..."
+            />
+            <p className="border-2 text-xs px-[0.4rem] py-[0.1rem] text-zinc-500 font-semibold rounded-md  border-zinc-700">
+              S
+            </p>
+          </div>
+        </div>
         <div className="flex gap-8 justify-center flex-wrap w-10/12 items-center">
-          {Courses.map((val) => {
+          {Courses.filter((val) => {
+            if (searchTerm == "") {
+              return val;
+            } else if (
+              val.title.toLowerCase().includes(searchTerm.toLowerCase())
+            ) {
+              return val;
+            }
+          }).map((val) => {
             return (
               <div
                 key={val.id}

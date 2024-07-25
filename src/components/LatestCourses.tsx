@@ -15,10 +15,12 @@ const LatestCourses = () => {
           <h1 className="text-4xl font-medium w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-400">
             Latest Courses
           </h1>
-          <div className="flex text-white font-semibold border-[1px] border-zinc-700 w-fit px-4 py-2 rounded-md items-center gap-2">
-            <button>Explore Our Courses</button>
-            <FaArrowRightLong />
-          </div>
+          <Link href="/courses">
+            <div className="flex text-white font-semibold border-[1px] border-zinc-700 w-fit px-4 py-2 rounded-md items-center gap-2">
+              <button>Explore Our Courses</button>
+              <FaArrowRightLong />
+            </div>
+          </Link>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-5 mt-2">
           {courseData.map((val) => {

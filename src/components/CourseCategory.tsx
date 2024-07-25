@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { BsGraphUp } from "react-icons/bs";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -60,10 +61,12 @@ const CourseCategory = () => {
           <h2 className="text-zinc-300 w-[20rem] tracking-wide">
             Browse Courses through Categories to find the Perfect Course.
           </h2>
-          <div className="mt-2 cursor-pointer flex bg-emerald-300 font-semibold w-fit px-4 py-2 rounded-md text-black items-center gap-2">
-            <button>Explore Our Courses</button>
-            <FaArrowRightLong />
-          </div>
+          <Link href="/courses">
+            <div className="mt-2 cursor-pointer flex bg-emerald-300 font-semibold w-fit px-4 py-2 rounded-md text-black items-center gap-2">
+              <button>Explore Our Courses</button>
+              <FaArrowRightLong />
+            </div>
+          </Link>
         </div>
         <div className="grid grid-flow-col md:grid-cols-2 md:grid-rows-3 grid-cols-3 grid-rows-2 justify-center items-center gap-4 ">
           {data.map((val) => {
