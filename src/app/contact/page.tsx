@@ -48,8 +48,8 @@ const page = () => {
       <Navbar />
       <div className="absolute  top-40 right-20 z-50">
         <motion.img
-        drag
-        dragSnapToOrigin = {true}
+          drag
+          dragSnapToOrigin={true}
           src="https://framerusercontent.com/images/Cw7txRkj102SoTp368n2ufAhs.png?scale-down-to=1024"
           alt=""
           height={100}
@@ -97,7 +97,7 @@ const page = () => {
             <div className="flex flex-wrap w-1/2 items-center pt-4 gap-6">
               {data.map((val) => {
                 return (
-                  <div className="flex gap-3 w-56 ">
+                  <div key={val.id} className="flex gap-3 w-56 ">
                     <div className="text-2xl border-2 px-3 py-3 w-fit  font-semibold rounded-lg  border-zinc-800">
                       {val.icon}
                     </div>
