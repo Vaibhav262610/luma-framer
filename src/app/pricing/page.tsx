@@ -68,7 +68,7 @@ const Page = () => {
     <>
       <Navbar />
       <div className="h-fit flex-col pt-48 w-full flex justify-center items-center">
-        <div className="flex flex-col gap-1 w-9/12 ">
+        <div className="flex flex-col gap-1 w-auto ">
           <h1
             data-aos="fade-up"
             data-aos-duration="500"

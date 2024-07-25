@@ -90,8 +90,8 @@ const Page = () => {
           </h2>
         </div>
       </div>
-      <div className="h-fit w-full py-40 gap-8 flex flex-col justify-between items-center">
-        <div className="flex gap-72 justify-around w-full items-center text-white">
+      <div className="h-fit w-auto py-40 gap-8 flex flex-col justify-between items-center">
+        <div className="flex w-full justify-around  items-center text-white">
           <h1 className="text-xl text-zinc-300 font-medium">All Courses</h1>
           <div className="flex bg-zinc-900 border-[1px] border-zinc-700 rounded-md cursor-pointer items-center gap-2 px-[6px] py-1 ">
             <CiSearch className="text-lg text-white font-bold" />
