@@ -192,8 +192,8 @@ const page = () => {
           />
         </div>
       </div>
-      <div className="  flex w-full pt-12 justify-center items-center text-white">
-        <div className="w-8/12 px-8 flex flex-col gap-20 ">
+      <div className="flex w-full pt-12 justify-center items-center text-white">
+        <div className="max-w-[80%] w-full px-12 flex flex-col gap-20 ">
           <div className="flex flex-col gap-3 mb-2">
             <h1
               data-aos="fade-up"
