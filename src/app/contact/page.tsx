@@ -46,9 +46,10 @@ const page = () => {
   return (
     <>
       <Navbar />
-      <div className="absolute">
-        <img
-          className="absolute bottom-0 right-0"
+      <div className="absolute  top-40 right-20 z-50">
+        <motion.img
+        drag
+        dragSnapToOrigin = {true}
           src="https://framerusercontent.com/images/Cw7txRkj102SoTp368n2ufAhs.png?scale-down-to=1024"
           alt=""
           height={100}
@@ -112,7 +113,7 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="bg-gradient-to-r from-zinc-800/70 border border-zinc-700  to-zinc-900/90  py-8 px-8 rounded-lg absolute  right-32 bottom-8 z-50">
+        <div className="bg-gradient-to-r from-zinc-800/70 border border-zinc-700  to-zinc-900/90  py-8 px-8 rounded-lg absolute  right-32 bottom-8 z-30">
           <div className="flex gap-8">
             <div className="flex flex-col gap-1">
               <h2 className="uppercase text-zinc-400 font-semibold text-xs">

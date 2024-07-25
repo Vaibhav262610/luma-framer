@@ -35,31 +35,36 @@ const Page = () => {
       </div>
       <div className="relative ">
         <motion.img
-          data-aos="zoom-in"
+          drag
+          dragSnapToOrigin={true}
           className=" cursor-grab absolute z-50 top-[50vh] right-[50vh] w-36"
           src="https://framerusercontent.com/images/YMQr3A29sQDnKCdgHPJEvp0iCU.png?scale-down-to=1024"
           alt=""
         />
         <motion.img
-          data-aos="zoom-in"
+          drag
+          dragSnapToOrigin={true}
           className="cursor-grab absolute z-40 top-[15vh] left-[25vh] w-36 blur-[2px]"
           src="https://framerusercontent.com/images/43n4nr2NJrNnRAHVipDXCJPZY.png?scale-down-to=1024"
           alt=""
         />
         <motion.img
-          data-aos="zoom-in"
+          drag
+          dragSnapToOrigin={true}
           className="cursor-grab absolute z-30 w-32 top-[10vh] right-[35vh] blur-[5px] "
           src="https://framerusercontent.com/images/iVEIMoOeg0btapECZ8Lmewv6gg.png?scale-down-to=1024"
           alt=""
         />
         <motion.img
-          data-aos="zoom-in"
+          drag
+          dragSnapToOrigin={true}
           className="cursor-grab absolute z-20 w-20 top-[40vh] left-[40vh] blur-md"
           src="https://framerusercontent.com/images/ioBrAcmXYF8LRSxJApCAUh9LI.png?scale-down-to=1024"
           alt=""
         />
         <motion.img
-          data-aos="zoom-in"
+          drag
+          dragSnapToOrigin={true}
           className="cursor-grab absolute z-10 w-24 top-[40vh] right-[30vh] blur-[2px]"
           src="https://framerusercontent.com/images/vz9kBTFoRFtcblXGjYPD8q3K3k.png?scale-down-to=1024"
           alt=""
