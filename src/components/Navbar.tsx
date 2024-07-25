@@ -34,8 +34,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex z-[99] fixed w-full pb-[0.4px] border-zinc-800 border-b-2">
-        <div className="nav flex items-center  w-full justify-evenly backdrop-blur-3xl bg-zinc-900/30 py-4">
+      <div className="flex z-[99] fixed w-full justify-center pb-[0.4px] bg-zinc-900/30 backdrop-blur border-zinc-700 border-b">
+        <div className="nav flex items-center min-w-[60%] justify-between  py-3">
           <Link href="/">
             <div className="">
               <Image

@@ -32,7 +32,7 @@ const Footer = () => {
   return (
     <>
       <div className="flex justify-center items-center w-full">
-        <div className="h-[90vh] border-t-2 border-zinc-800 gap-16 bg-red-500 flex-col justify-center items-center max-w-[80%] min-w-[100%] flex">
+        <div className="h-[90vh] border-t-2 border-zinc-800 gap-16  flex-col justify-center items-center min-w-[70%]  flex">
           <div className="flex md:flex-row flex-col justify-evenly w-full">
             <div className=" flex flex-col gap-3">
               <img
