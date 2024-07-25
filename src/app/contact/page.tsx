@@ -1,3 +1,5 @@
+"use client";
+
 import AccordinCards from "@/components/AccordinCards";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -5,6 +7,7 @@ import QuestonCard from "@/components/QuestionCard";
 import { SparklesCore } from "@/components/ui/sparkles";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaArrowRightLong,
   FaRegCircleQuestion,
@@ -43,6 +46,15 @@ const page = () => {
   return (
     <>
       <Navbar />
+      <div className="absolute">
+        <img
+          className="absolute bottom-0 right-0"
+          src="https://framerusercontent.com/images/Cw7txRkj102SoTp368n2ufAhs.png?scale-down-to=1024"
+          alt=""
+          height={100}
+          width={100}
+        />
+      </div>
       <div className="h-[80vh] border-b border-zinc-800 pt-40 w-full flex justify-center items-center text-white  bg-gradient-to-r from-transparent  to-zinc-700/10">
         <div className="flex flex-col gap-4">
           <div
@@ -100,7 +112,74 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="w-full opacity-30 absolute inset-0 h-[60vh]">
+        <div className="bg-gradient-to-r from-zinc-800/70 border border-zinc-700  to-zinc-900/90  py-8 px-8 rounded-lg absolute  right-32 bottom-8 z-50">
+          <div className="flex gap-8">
+            <div className="flex flex-col gap-1">
+              <h2 className="uppercase text-zinc-400 font-semibold text-xs">
+                first name
+              </h2>
+              <input
+                type="text"
+                placeholder="Vaibhav"
+                className="text-zinc-400 placeholder-zinc-500 text-sm outline-none bg-transparent border border-zinc-600 rounded-lg  py-2 px-4"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <h2 className="uppercase text-zinc-400 font-semibold text-xs">
+                last name
+              </h2>
+              <input
+                type="text"
+                placeholder="Rajpoot"
+                className="text-zinc-400 placeholder-zinc-500 outline-none text-sm bg-transparent border border-zinc-600 rounded-lg  py-2 px-4"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-5">
+            <div className="flex mt-4 flex-col gap-1">
+              <h2 className="uppercase text-zinc-400 font-semibold text-xs">
+                Email
+              </h2>
+              <input
+                type="text"
+                placeholder="hey@gmaiil.com"
+                className="text-zinc-400 placeholder-zinc-500 outline-none text-sm bg-transparent border border-zinc-600 rounded-lg  py-2 px-4"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <h2 className="uppercase text-zinc-400 font-semibold text-xs">
+                subject
+              </h2>
+              <input
+                type="text"
+                placeholder="Your Subject"
+                className="text-zinc-400 placeholder-zinc-500 outline-none text-sm bg-transparent border border-zinc-600 rounded-lg  py-2 px-4"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <h2 className="uppercase text-zinc-400 font-semibold text-xs">
+                message
+              </h2>
+              <textarea
+                placeholder="Your Message"
+                className="text-zinc-400 placeholder-zinc-500 outline-none text-sm bg-transparent border border-zinc-600 rounded-lg  py-2 px-4"
+                name="w3review"
+                rows={8}
+              ></textarea>
+            </div>
+            <Link href="/">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="500"
+                className="flex cursor-pointer bg-emerald-400 font-semibold w-full justify-center px-4 py-2 rounded-md text-black items-center gap-2"
+              >
+                <button>Send Message</button>
+                <FaArrowRightLong />
+              </div>
+            </Link>
+          </div>
+        </div>
+        <div className="w-full z-10 opacity-30 absolute inset-0 h-[60vh]">
           <SparklesCore
             id="tsparticlesfullpage"
             background="transparent"
