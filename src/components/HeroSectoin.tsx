@@ -4,8 +4,6 @@ import dynamic from "next/dynamic";
 import React, { useEffect } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
-import { Meteors } from "./ui/meteors";
-import { Spotlight } from "./ui/Spotlight";
 import Link from "next/link";
 import ShootingStars from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
@@ -469,8 +467,8 @@ const HeroSectoin = () => {
             {/* </div> */}
           </div>
         </div>
-        <div className="w-full sm:w-1/3 h-[40rem] cursor-grab grayscale z-0">
-          {/* <World data={sampleArcs} globeConfig={globeConfig} /> */}
+        <div className="w-full sm:w-1/3 h-[30rem] cursor-grab grayscale z-0">
+          <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
     </>
