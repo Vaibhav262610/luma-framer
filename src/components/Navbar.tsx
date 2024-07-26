@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <>
       <div className="flex z-[99] fixed w-full justify-center pb-[0.4px] bg-zinc-900/30 backdrop-blur border-zinc-700 border-b">
-        <div className="nav flex items-center min-w-[60%] justify-between  py-3">
+        <div className="nav flex items-center w-full max-w-[70%]  justify-between  py-3">
           <Link href="/">
             <div className="">
               <Image

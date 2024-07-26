@@ -11,8 +11,8 @@ const LatestCourses = () => {
   return (
     <>
       <div className="flex w-full justify-center items-center">
-        <div className="h-screen md:h-fit    flex-col mt-10 gap-4 flex justify-center items-center">
-          <div className="flex mt-24 items-start px-5  w-full justify-between">
+        <div className="h-fit flex-col mt-10 gap-4 flex justify-center items-center">
+          <div className="flex featured-text mt-24 items-start px-5  w-full justify-between">
             <h1 className="text-4xl font-medium w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-400">
               Latest Courses
             </h1>
@@ -23,7 +23,7 @@ const LatestCourses = () => {
               </div>
             </Link>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-5 mt-2">
+          <div className="flex w-full flex-wrap items-center justify-center gap-5 mt-2">
             {courseData.map((val) => {
               return (
                 <div

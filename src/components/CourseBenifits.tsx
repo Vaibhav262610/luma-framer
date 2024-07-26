@@ -48,9 +48,9 @@ const CourseBenifits = () => {
 
   return (
     <>
-      <div className=" flex flex-col gap-4 h-screen w-full justify-center items-center">
+      <div className=" flex flex-col gap-4 h-fit w-full justify-center items-center">
         <div className="flex flex-col justify-center items-center mt-20 gap-4">
-          <FaRegFaceSmileWink className="text-2xl" />
+          <FaRegFaceSmileWink className="text-white text-2xl" />
           <h1 className="uppercase font-bold tracking-wider text-xs text-emerald-300">
             AMAZING BENEFITS
           </h1>

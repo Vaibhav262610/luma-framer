@@ -10,14 +10,20 @@ const FeaturedCourses = () => {
 
   return (
     <>
-      <div className="w-full flex justify-center">
-        <div className="h-fit xl:h-screen max-w-[80%] flex-col mt-10 gap-4 flex justify-center items-center">
-          <div className="flex mt-24 items-start w-full">
+      <div className="flex h-fit w-full justify-center items-center">
+        <div className="h-fit flex-col mt-10 gap-4 flex justify-center items-center">
+          <div className="flex featured-text mt-24 items-start px-5  w-full justify-between">
             <h1 className="text-4xl font-medium w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-400">
               Featured Courses
             </h1>
+            <Link href="/courses">
+              <div className="flex text-transparent font-semibold w-fit px-4 py-2 rounded-md items-center gap-2">
+                <button>Explore Our Courses</button>
+                <FaArrowRightLong />
+              </div>
+            </Link>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-5 mt-10">
+          <div className="flex flex-wrap featured-card w-full items-center justify-center gap-5 mt-2">
             {courseData.map((val) => {
               return (
                 <div
@@ -45,7 +51,7 @@ const FeaturedCourses = () => {
                           Rated 5 Stars
                         </h1>
                       </div>
-                      <div className="w-fit">
+                      <div className="w-fit ">
                         <p className="border-2 bg-white/15 px-[0.4rem] py-[0.1rem] text-white text-sm font-semibold rounded-md  border-zinc-700">
                           $ {val.price}
                         </p>
@@ -82,7 +88,8 @@ const FeaturedCourses = () => {
                       </div>
                     </div>
                     <Link href={`/courses`}>
-                      <div className="flex cursor-pointer bg-emerald-300 w-full font-semibold gap-20 justify-end px-4 py-2 rounded-md text-black items-center">
+                      <div className="flex bg-emerald-300 w-full cursor-pointer font-semibold gap-20 justify-end px-4 py-2 rounded-md text-black items-center">
+                        {/* <FaArrowRightLong className="hidden" /> */}
                         <button className="text-center">View Courses</button>
                         <FaArrowRightLong />
                       </div>

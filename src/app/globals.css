@@ -5,6 +5,7 @@
 body {
   background-color: rgb(15, 15, 15);
   font-family: "General Sans", sans-serif;
+  /* color: #ff0000; */
 }
 
 ::selection {
@@ -27,4 +28,27 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(106, 106, 106);
+}
+
+@media only screen and (max-width: 1105px) {
+  .featured-text {
+    justify-content: space-evenly;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav-items {
+    display: none;
+  }
+
+  .header {
+    flex-direction: column;
+    height: 200vh;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .category{
+    flex-direction: column;
+    height: fit-content;
+  }
 }
