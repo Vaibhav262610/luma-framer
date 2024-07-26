@@ -17,7 +17,7 @@ export default function Home() {
       <LatestCourses />
       <CourseCategory />
       <Statistcal />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

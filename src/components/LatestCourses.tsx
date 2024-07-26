@@ -12,12 +12,12 @@ const LatestCourses = () => {
     <>
       <div className="flex w-full justify-center items-center">
         <div className="h-fit flex-col mt-10 gap-4 flex justify-center items-center">
-          <div className="flex featured-text mt-24 items-start px-5  w-full justify-between">
+          <div className="flex featured-text mt-24 items-start px-5  w-full justify-center sm:justify-between">
             <h1 className="text-4xl font-medium w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-400">
               Latest Courses
             </h1>
             <Link href="/courses">
-              <div className="flex text-white font-semibold border-[1px] border-zinc-700 w-fit px-4 py-2 rounded-md items-center gap-2">
+              <div className="sm:flex hidden text-white font-semibold border-[1px] border-zinc-700 w-fit px-4 py-2 rounded-md items-center gap-2">
                 <button>Explore Our Courses</button>
                 <FaArrowRightLong />
               </div>
