@@ -34,7 +34,7 @@ const Footer = () => {
       <div className="flex sm:px-0 justify-center items-center w-full">
         <div className="h-[90vh]  border-t-2 border-zinc-800 gap-16  flex-col justify-center items-center min-w-[70%]  flex">
           <div className="flex md:flex-row flex-col justify-evenly w-full">
-            <div className=" flex sm:px-0 px-2 flex-col gap-3">
+            <div className=" flex sm:px-0 px-4 flex-col gap-3">
               <img
                 src="https://framerusercontent.com/images/FKwdEG0CCsTEKv5Fy5ueyuvq3BE.svg"
                 height={45}
@@ -71,7 +71,7 @@ const Footer = () => {
                   </button>
                 </div>
               </div>
-              <div className="flex sm:px-0 px-2 sm:flex-row flex-col">
+              <div className="flex sm:px-0 px-4 sm:flex-row flex-col">
                 <div className="flex gap-12">
                   {data.map((val) => {
                     return (
