@@ -49,8 +49,8 @@ const CourseCategory = () => {
   ];
   return (
     <>
-      <div className="flex bg-pink-500 w-full items-center justify-center">
-        <div className="h-screen category xl:w-full xl:px-0 px-7 max-w-11/12 gap-12 flex xl:flex-row flex-col xl:items-center justify-center ">
+      <div className="flex  w-full items-center justify-center">
+        <div className="h-fit sm:py-0 py-20  sm:h-screen category xl:w-full xl:px-0 px-7 max-w-11/12 gap-12 flex xl:flex-row flex-col xl:items-center justify-center ">
           <div className="flex items-start justify-start text-left flex-col gap-2">
             <RiMenuSearchLine className="text-2xl" />
             <h1 className="text-4xl font-medium w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
@@ -69,7 +69,7 @@ const CourseCategory = () => {
               </div>
             </Link>
           </div>
-          <div className="grid grid-flow-col md:grid-cols-2 md:grid-rows-3 grid-cols-3 grid-rows-2 justify-center items-center gap-4 ">
+          <div className="sm:grid flex flex-col gap-5 grid-flow-col md:grid-cols-2 md:grid-rows-3 grid-cols-3 grid-rows-2 justify-center items-center ">
             {data.map((val) => {
               return (
                 <div

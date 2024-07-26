@@ -48,16 +48,16 @@ const CourseBenifits = () => {
 
   return (
     <>
-      <div className=" flex bg-blue-500 flex-col gap-4 h-fit w-full justify-center items-center">
+      <div className=" flex  flex-col gap-4 h-fit w-full justify-center items-center">
         <div className="flex flex-col justify-center items-center mt-20 gap-4">
           <FaRegFaceSmileWink className="text-white text-2xl" />
           <h1 className="uppercase font-bold tracking-wider text-xs text-emerald-300">
             AMAZING BENEFITS
           </h1>
-          <h1 className="text-4xl text-white">
+          <h1 className="text-4xl sm:text-left text-center text-white">
             Stunning Benefits of our Courses
           </h1>
-          <h2 className="text-zinc-300 text-md w-[30rem] text-center">
+          <h2 className="text-zinc-300 text-md w-auto sm:w-[30rem] text-center">
             Explore the incredible advantages of enrolling in our courses and
             enhancing your skills.
           </h2>

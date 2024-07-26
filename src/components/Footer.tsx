@@ -31,39 +31,39 @@ const Footer = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center w-full">
-        <div className="h-[90vh] border-t-2 border-zinc-800 gap-16  flex-col justify-center items-center min-w-[70%]  flex">
+      <div className="flex sm:px-0 justify-center items-center w-full">
+        <div className="h-[90vh]  border-t-2 border-zinc-800 gap-16  flex-col justify-center items-center min-w-[70%]  flex">
           <div className="flex md:flex-row flex-col justify-evenly w-full">
-            <div className=" flex flex-col gap-3">
+            <div className=" flex sm:px-0 px-2 flex-col gap-3">
               <img
                 src="https://framerusercontent.com/images/FKwdEG0CCsTEKv5Fy5ueyuvq3BE.svg"
                 height={45}
                 width={45}
                 alt=""
               />
-              <h1 className="text-md text-zinc-300 w-[25rem]">
+              <h1 className="text-md text-zinc-300 w-auto sm:w-[25rem]">
                 Luma is a powerful Membership Template to Sell your Courses and
                 Membership Content.
               </h1>
               <div className="flex gap-2 items-center">
-                <CiFacebook className="text-xl" />
-                <AiOutlineYoutube className="text-xl" />
-                <FaXTwitter />
+                <CiFacebook className=" text-white text-xl" />
+                <AiOutlineYoutube className=" text-white text-xl" />
+                <FaXTwitter className=" text-white " />
               </div>
             </div>
-            <div className="flex  flex-col  gap-12">
-              <div className="flex flex-col gap-3 border py-6 px-4 border-zinc-800 rounded-lg w-[35rem]">
-                <h1 className="text-4xl font-medium text-zinc-200">
+            <div className="flex  flex-col gap-12">
+              <div className="flex flex-col gap-3 border py-6 px-4 border-zinc-800 rounded-lg w-auto sm:w-[35rem]">
+                <h1 className="text-3xl sm:text-4xl font-medium text-zinc-200">
                   Stay Up-to-Date!
                 </h1>
-                <h2 className="text-md text-zinc-300  w-[30rem]">
+                <h2 className="text-md text-zinc-300 w-auto sm:w-[30rem]">
                   Subscribe to our Newsletter to stay up-to-date on latest
                   courses, updates, news and discounts from us.
                 </h2>
                 <div className="border py-1 px-2 rounded-lg w-fit bg-gradient-to-r from-zinc-900/10  to-white/15  border-zinc-700">
                   <input
                     type="text"
-                    className="w-[20rem] pl-2 text-lg text-zinc-900 bg-transparent font-normal"
+                    className="w-auto sm:w-[20rem] pl-2 text-lg text-zinc-900 bg-transparent font-normal"
                     placeholder="Email Address"
                   />
                   <button className="bg-zinc-700 text-white py-3 px-7 rounded-lg font-bold">
@@ -71,7 +71,7 @@ const Footer = () => {
                   </button>
                 </div>
               </div>
-              <div className="flex">
+              <div className="flex sm:px-0 px-2 sm:flex-row flex-col">
                 <div className="flex gap-12">
                   {data.map((val) => {
                     return (

@@ -13,11 +13,11 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <FeaturedCourses />
-      {/* <CourseBenifits /> */}
-      {/* <LatestCourses /> */}
-      {/* <CourseCategory /> */}
-      {/* <Statistcal /> */}
-      {/* <Footer /> */}
+      <CourseBenifits />
+      <LatestCourses />
+      <CourseCategory />
+      <Statistcal />
+      <Footer />
     </>
   );
 }
