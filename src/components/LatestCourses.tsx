@@ -10,7 +10,7 @@ const LatestCourses = () => {
 
   return (
     <>
-      <div className="flex w-full justify-center items-center">
+      <div className="flex bg-purple-600 w-full justify-center items-center">
         <div className="h-fit flex-col mt-10 gap-4 flex justify-center items-center">
           <div className="flex featured-text mt-24 items-start px-5  w-full justify-center sm:justify-between">
             <h1 className="text-4xl font-medium w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-400">

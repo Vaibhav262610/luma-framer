@@ -49,7 +49,7 @@ const CourseCategory = () => {
   ];
   return (
     <>
-      <div className="flex w-full items-center justify-center">
+      <div className="flex bg-pink-500 w-full items-center justify-center">
         <div className="h-screen category xl:w-full xl:px-0 px-7 max-w-11/12 gap-12 flex xl:flex-row flex-col xl:items-center justify-center ">
           <div className="flex items-start justify-start text-left flex-col gap-2">
             <RiMenuSearchLine className="text-2xl" />

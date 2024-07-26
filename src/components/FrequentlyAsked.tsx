@@ -6,7 +6,7 @@ import QuestonCard from "./QuestionCard";
 const FrequentlyAsked = () => {
   return (
     <>
-      <div className="h-fit w-auto flex flex-col  ">
+      <div className="h-fit bg-green-500 w-auto flex flex-col  ">
         <div className="flex flex-col justify-center items-center mt-20 gap-4">
           <FaRegFaceSmileWink className="text-2xl" />
           <h1 className="uppercase font-bold tracking-wider text-xs text-emerald-300">
