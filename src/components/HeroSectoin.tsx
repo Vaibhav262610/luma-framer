@@ -7,6 +7,8 @@ import { AnimatedTooltip } from "./ui/animated-tooltip";
 import { Meteors } from "./ui/meteors";
 import { Spotlight } from "./ui/Spotlight";
 import Link from "next/link";
+import ShootingStars from "@/components/ui/shooting-stars";
+import { StarsBackground } from "@/components/ui/stars-background";
 
 const HeroSectoin = () => {
   const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
@@ -431,7 +433,9 @@ const HeroSectoin = () => {
   ];
   return (
     <>
-      <Meteors number={10} className="mt-40" />
+      {/* <Meteors number={10} className="mt-40" /> */}
+      <ShootingStars />
+      <StarsBackground />
       <div className="header h-[200vh] xl:h-screen w-full flex xl:flex-row flex-col justify-evenly xl:justify-evenly items-center">
         <div className=" flex w-11/12 md:w-6/12 lg:w-5/12 xl:w-4/12 flex-col sm:mt-12 gap-4">
           <div className="flex bg-gradient-to-r font-medium text-zinc-400 text-sm from-black  to-white/20 border-[1px] border-zinc-700 rounded-md  items-center gap-2 px-3 py-1 w-fit">
