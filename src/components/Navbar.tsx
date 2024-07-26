@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { IoReorderThree } from "react-icons/io5";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -35,7 +36,7 @@ const Navbar = () => {
   return (
     <>
       <div className="flex z-[99] fixed w-full justify-center pb-[0.4px] bg-zinc-900/30 backdrop-blur border-zinc-700 border-b">
-        <div className="nav flex items-center w-full max-w-[70%]  justify-between  py-3">
+        <div className="nav flex items-center w-full px-6 xl:max-w-[70%] justify-between  py-3">
           <Link href="/">
             <div className="">
               <Image
@@ -46,8 +47,8 @@ const Navbar = () => {
               />
             </div>
           </Link>
-          <div className="nav-items ">
-            <ul className="flex items-center justify-center gap-8">
+          <div className="">
+            <ul className="lg:flex hidden items-center justify-center gap-8">
               {navItems.map((val) => {
                 const activeLink = pathname == val.link;
                 return (
@@ -82,11 +83,16 @@ const Navbar = () => {
               })}
             </ul>
           </div>
-          <div className="flex bg-gradient-to-r from-black  to-white/10 border-[1px] border-zinc-700 rounded-md cursor-pointer items-center gap-2 px-[6px] py-1 ">
-            <p className="border-2 text-xs px-[0.4rem] py-[0.1rem] text-zinc-500 font-semibold rounded-md  border-zinc-700">
-              L
-            </p>
-            <button className="pr-2 text-white font-medium">Login</button>
+          <div className="flex gap-5">
+            <div className="flex bg-gradient-to-r from-black  to-white/10 border-[1px] border-zinc-700 rounded-md cursor-pointer items-center gap-2 px-[6px] py-1 ">
+              <p className="border-2 text-xs px-[0.4rem] py-[0.1rem] text-zinc-500 font-semibold rounded-md  border-zinc-700">
+                L
+              </p>
+              <button className="pr-2 text-white font-medium">Login</button>
+            </div>
+            <div className="border-2 flex items-center text-xl px-[0.4rem] py-[0.1rem] text-white font-semibold rounded-md  border-zinc-700">
+              <IoReorderThree />
+            </div>
           </div>
         </div>
       </div>

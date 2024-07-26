@@ -10,7 +10,7 @@ const config = {
   ],
   prefix: "",
   theme: {
-    extend: { 
+    extend: {
       keyframes: {
         meteor: {
           "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },

@@ -2,8 +2,6 @@
 
 import Navbar from "@/components/Navbar";
 import React, { useEffect, useState } from "react";
-import "aos/dist/aos.css";
-import AOS from "aos";
 import { motion } from "framer-motion";
 import Courses from "@/data/courses";
 import { SparklesCore } from "@/components/ui/sparkles";
@@ -16,9 +14,6 @@ import Link from "next/link";
 const Page = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
   return (
     <>
       <Navbar />
@@ -72,24 +67,15 @@ const Page = () => {
       </div>
       <div className="border-b-2 border-zinc-800 h-[60vh] w-full flex justify-center items-center">
         <div className="gap-4 flex flex-col justify-center items-center ">
-          <div
-            data-aos="fade-up"
-            className="font-normal flex gap-2 items-center"
-          >
+          <div className="font-normal flex gap-2 items-center">
             <h1 className="font-normal text-zinc-300">Home</h1>
             <FaArrowRightLong className="text-white text-sm" />
             <h1 className="text-white font-medium">Courses</h1>
           </div>
-          <h1
-            data-aos="fade-up"
-            className="text-5xl font-bold w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500"
-          >
+          <h1 className="text-5xl font-bold w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500">
             Browse All Our Courses
           </h1>
-          <h2
-            data-aos="fade-up"
-            className="tracking-wider text-zinc-300 text-center w-9/12"
-          >
+          <h2 className="tracking-wider text-zinc-300 text-center w-9/12">
             Check out our World Class Courses Below. From Web Design to Video
             Editing you ll find all kinds of Courses.
           </h2>

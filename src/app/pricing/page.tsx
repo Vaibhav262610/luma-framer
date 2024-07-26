@@ -4,20 +4,12 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import React, { useEffect, useState } from "react";
 import { Switch } from "@/components/ui/switch";
-import "aos/dist/aos.css";
-import AOS from "aos";
 import { FaArrowRightLong, FaRegStar } from "react-icons/fa6";
 import CourseBenifits from "@/components/CourseBenifits";
 import FrequentlyAsked from "@/components/FrequentlyAsked";
 
 const Page = () => {
   const [billing, setBlling] = useState(false);
-
-  useEffect(() => {
-    AOS.init({
-      once: true,
-    });
-  }, []);
 
   const pricingData = [
     {
@@ -69,25 +61,13 @@ const Page = () => {
       <Navbar />
       <div className="h-fit flex-col pt-48 w-full flex justify-center items-center">
         <div className="flex flex-col gap-1 w-auto ">
-          <h1
-            data-aos="fade-up"
-            data-aos-duration="500"
-            className="text-sm tracking-wider uppercase w-fit font-bold text-emerald-300"
-          >
+          <h1 className="text-sm tracking-wider uppercase w-fit font-bold text-emerald-300">
             GET ACCESS TO ALL COURSES
           </h1>
-          <h1
-            data-aos="fade-up"
-            data-aos-duration="600"
-            className="text-[3rem] tracking-tight font-black w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-600"
-          >
+          <h1 className="text-[3rem] tracking-tight font-black w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-600">
             Get All Access Pass Today!
           </h1>
-          <h1
-            data-aos="fade-up"
-            data-aos-duration="700"
-            className="text-lg w-8/12 leading-loose text-zinc-400"
-          >
+          <h1 className="text-lg w-8/12 leading-loose text-zinc-400">
             Join today and get discounted access to all our courses. With our
             All Access Pass, you&apos;ll have early access to courses and
             exclusive VIP content for members.
@@ -113,8 +93,6 @@ const Page = () => {
             {pricingData.map((val) => {
               return (
                 <div
-                  data-aos="fade-right"
-                  data-aos-duration="500"
                   key={val.id}
                   className="border bg-zinc-900/70 border-zinc-600 rounded-lg p-6 w-fit"
                 >

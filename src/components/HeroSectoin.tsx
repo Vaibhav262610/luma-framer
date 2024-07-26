@@ -2,8 +2,6 @@
 
 import dynamic from "next/dynamic";
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 import { Meteors } from "./ui/meteors";
@@ -11,9 +9,6 @@ import { Spotlight } from "./ui/Spotlight";
 import Link from "next/link";
 
 const HeroSectoin = () => {
-  useEffect(() => {
-    AOS.init({ once: true });
-  }, []);
   const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
     ssr: false,
   });
@@ -437,35 +432,19 @@ const HeroSectoin = () => {
   return (
     <>
       <Meteors number={10} className="mt-40" />
-      <Spotlight className=" md:left-60 md:-top-20" fill="gray" />
-      <div className="header h-screen w-full flex flex-row justify-center items-center">
+      {/* <Spotlight className=" md:left-60 md:-top-20" fill="gray" /> */}
+      <div className="header h-[200vh] xl:h-screen w-full flex xl:flex-row flex-col justify-evenly xl:justify-center items-center">
         <div className=" flex flex-col mt-12 gap-4">
-          <div
-            data-aos="fade-up"
-            data-aos-duration="500"
-            className="flex bg-gradient-to-r font-medium text-zinc-400 text-sm from-black  to-white/20 border-[1px] border-zinc-700 rounded-md  items-center gap-2 px-3 py-1 w-fit"
-          >
+          <div className="flex bg-gradient-to-r font-medium text-zinc-400 text-sm from-black  to-white/20 border-[1px] border-zinc-700 rounded-md  items-center gap-2 px-3 py-1 w-fit">
             <h2>Courses/Membershpi Template</h2>
           </div>
-          <h1
-            data-aos="fade-up"
-            data-aos-duration="500"
-            className="text-5xl font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400"
-          >
+          <h1 className="text-5xl font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
             Unlock Your Potential.
           </h1>
-          <h1
-            data-aos="fade-up"
-            data-aos-duration="500"
-            className="text-5xl font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400"
-          >
+          <h1 className="text-5xl font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
             Expand Your Skills.
           </h1>
-          <p
-            data-aos="fade-up"
-            data-aos-duration="500"
-            className="text-[#FFFFFFCC] w-[27rem] font-medium"
-          >
+          <p className="text-[#FFFFFFCC] w-[27rem] font-medium">
             Create Beautiful Membership Sites to Sell your Courses or any other
             products using the{" "}
             <span className="font-bold"> Luma Template for Framer.</span>{" "}
@@ -473,21 +452,13 @@ const HeroSectoin = () => {
             experience.
           </p>
           <Link href="/courses">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="500"
-              className="flex cursor-pointer bg-emerald-400 font-semibold w-fit px-4 py-2 rounded-md text-black items-center gap-2"
-            >
+            <div className="flex cursor-pointer bg-emerald-400 font-semibold w-fit px-4 py-2 rounded-md text-black items-center gap-2">
               <button>Explore Our Courses</button>
               <FaArrowRightLong />
             </div>
           </Link>
           {/* <div className="flex"> */}
-          <div
-            data-aos="fade-up"
-            data-aos-duration="500"
-            className="flex gap-1 mt-8 flex-row items-center w-full"
-          >
+          <div className="flex gap-1 mt-8 flex-row items-center w-full">
             <AnimatedTooltip items={people} />
             <h2 className="ml-8 font-semibold text-white ">
               5,000+ Happy Students
@@ -495,10 +466,7 @@ const HeroSectoin = () => {
             {/* </div> */}
           </div>
         </div>
-        <div
-          data-aos="zoom-in"
-          className="w-[40rem] h-[40rem] cursor-grab grayscale z-0"
-        >
+        <div className="w-[40rem] h-[40rem] cursor-grab grayscale z-0">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>

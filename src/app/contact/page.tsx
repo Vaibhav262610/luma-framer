@@ -58,10 +58,7 @@ const page = () => {
       </div>
       <div className="h-[80vh] border-b border-zinc-800 pt-40 w-full flex justify-center items-center text-white  bg-gradient-to-r from-transparent  to-zinc-700/10">
         <div className="flex flex-col gap-4">
-          <div
-            data-aos="fade-up"
-            className="font-normal flex gap-3 items-center"
-          >
+          <div>
             <Link href="/">
               <h1 className="font-normal hover:text-white duration-150 text-zinc-300">
                 Home
@@ -70,25 +67,13 @@ const page = () => {
             <FaArrowRightLong className="text-white text-sm" />
             <h1 className="text-white font-medium">Contact & Support</h1>
           </div>
-          <h1
-            data-aos="fade-up"
-            data-aos-duration="500"
-            className="text-6xl font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-600"
-          >
+          <h1 className="text-6xl font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-600">
             How Can We Assist
           </h1>
-          <h1
-            data-aos="fade-up"
-            data-aos-duration="500"
-            className="text-6xl font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-600"
-          >
+          <h1 className="text-6xl font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-600">
             You Today?
           </h1>
-          <p
-            data-aos="fade-up"
-            data-aos-duration="500"
-            className="text-zinc-400 w-[29rem] tracking-wide "
-          >
+          <p className="text-zinc-400 w-[29rem] tracking-wide ">
             Need some assistance? Feel free to send us a message using this
             form, and we&apos;ll respond promptly!
           </p>

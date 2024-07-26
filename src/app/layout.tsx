@@ -13,7 +13,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <title>Luma - Membershp Template for Framer</title>
-        <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+        {/* <link rel="stylesheet" href="bower_components/aos/dist/aos.css" /> */}
       </head>
       <body>{children}</body>
     </html>

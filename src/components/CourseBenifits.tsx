@@ -62,7 +62,7 @@ const CourseBenifits = () => {
             enhancing your skills.
           </h2>
         </div>
-        <div className="grid grid-rows-2 grid-cols-2 gap-4 max-w-[60%] justify-center items-center mt-12">
+        <div className="grid grid-rows-2 grid-cols-2 gap-4 w-full lg:max-w-[60%] justify-center items-center mt-12">
           {data.map((val) => {
             return (
               <div
