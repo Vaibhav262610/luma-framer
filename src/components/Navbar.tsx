@@ -87,33 +87,43 @@ const Navbar = () => {
                 })}
               </ul>
             ) : (
-              <ul className="absolute top-0 left-0 z-[20] bg-black w-full h-screen flex flex-col items-center justify-center gap-8">
-                {navItems.map((val) => {
-                  const activeLink = pathname == val.link;
-                  return (
-                    <div key={val.id}>
-                      <Link href={val.link}>
-                        <motion.li
-                          whileTap={{ scale: 0.9 }}
-                          className={`${
-                            activeLink
-                              ? "border border-zinc-600 px-1 py-1 bg-zinc-700/30 rounded-lg"
-                              : ""
-                          } flex  gap-2 items-center cursor-pointer`}
-                        >
-                          <h1
-                            className={`  tracking-tight font-medium text-3xl ${
-                              activeLink ? "text-white" : "text-white "
-                            }`}
+              <>
+                <ul className="absolute top-0 left-0 z-[20] bg-black w-full h-screen flex flex-col items-center justify-center gap-8">
+                  <div
+                    onClick={() => setMenu(!menu)}
+                    className="absolute top-4 right-6 border-2 lg:hidden flex items-center text-xl p-2 text-white font-semibold rounded-md  border-zinc-700"
+                  >
+                    <RxCross1 className="text-sm" />
+                  </div>
+                  {navItems.map((val) => {
+                    const activeLink = pathname == val.link;
+                    return (
+                      <div key={val.id}>
+                        <Link href={val.link}>
+                          <motion.li
+                            animate={{ y: -20, opacity: [0, 1] }}
+                            transition={{ ease: "easeOut", duration: 0.5 }}
+                            whileTap={{ scale: 0.9 }}
+                            className={`${
+                              activeLink
+                                ? "border border-zinc-600 px-1 py-1 bg-zinc-700/30 rounded-lg"
+                                : ""
+                            } flex  gap-2 items-center cursor-pointer`}
                           >
-                            {val.title}
-                          </h1>
-                        </motion.li>
-                      </Link>
-                    </div>
-                  );
-                })}
-              </ul>
+                            <h1
+                              className={`  tracking-tight font-medium text-3xl ${
+                                activeLink ? "text-white" : "text-white "
+                              }`}
+                            >
+                              {val.title}
+                            </h1>
+                          </motion.li>
+                        </Link>
+                      </div>
+                    );
+                  })}
+                </ul>
+              </>
             )}
           </div>
           <div className="flex gap-2">
