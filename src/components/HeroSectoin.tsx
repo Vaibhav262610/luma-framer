@@ -437,7 +437,7 @@ const HeroSectoin = () => {
       <div className="header h-[200vh] xl:h-screen w-full flex xl:flex-row flex-col justify-around xl:justify-center items-center">
         <div className=" flex w-11/12 md:w-6/12 lg:w-5/12 xl:w-4/12 flex-col sm:mt-12 gap-4">
           <div className="flex bg-gradient-to-r font-medium text-zinc-400 text-sm from-black  to-white/20 border-[1px] border-zinc-700 rounded-md  items-center gap-2 px-3 py-1 w-fit">
-            <h2>Courses/Membershpi Template</h2>
+            <h2>Courses/Membership Template</h2>
           </div>
           <h1 className="text-5xl font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
             Unlock Your Potential.

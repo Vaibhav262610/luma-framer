@@ -51,7 +51,7 @@ const Footer = () => {
                 <FaXTwitter className=" text-white " />
               </div>
             </div>
-            <div className="flex  flex-col gap-12">
+            <div className="flex mt-4 sm:mt-0 flex-col gap-12">
               <div className="flex flex-col gap-3 border py-6 px-4 border-zinc-800 rounded-lg w-auto sm:w-[35rem]">
                 <h1 className="text-3xl sm:text-4xl font-medium text-zinc-200">
                   Stay Up-to-Date!

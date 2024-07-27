@@ -4,9 +4,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { easeInOut, motion } from "framer-motion";
+import { easeOut, motion, AnimatePresence } from "framer-motion";
 import { IoReorderThree } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
+import { Opacity } from "@tsparticles/engine";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(true);
@@ -88,46 +89,54 @@ const Navbar = () => {
               </ul>
             ) : (
               <>
-                <motion.ul
-                  initial={{ x: 500 }}
-                  animate={{ backgroundColor: "black", x: 0 , opacity : [0,1] }}
-                  transition={{ duration: 0.4, ease: easeInOut }}
-                  className="absolute top-0 left-0 z-[20] bg-black w-full h-screen flex flex-col items-center justify-center gap-8"
-                >
-                  <div
-                    onClick={() => setMenu(!menu)}
-                    className="absolute top-4 right-6 border-2 lg:hidden flex items-center text-xl p-2 text-white font-semibold rounded-md  border-zinc-700"
+                <AnimatePresence>
+                  <motion.div
+                    initial={{ x: 500, opacity: 0 }}
+                    animate={{
+                      backgroundColor: "black",
+                      x: 0,
+                      opacity: 1,
+                    }}
+                    exit={{ x: 500, opacity: 0 }}
+                    
+                    transition={{ duration: 0.3, ease: easeOut }}
+                    className="absolute top-0 left-0 z-[20] bg-black w-full h-screen flex flex-col items-center justify-center gap-8"
                   >
-                    <RxCross1 className="text-sm" />
-                  </div>
-                  {navItems.map((val) => {
-                    const activeLink = pathname == val.link;
-                    return (
-                      <div key={val.id}>
-                        <Link href={val.link}>
-                          <motion.li
-                            animate={{ y: -20, opacity: [0, 1] }}
-                            transition={{ ease: "easeOut", duration: 0.5 }}
-                            whileTap={{ scale: 0.9 }}
-                            className={`${
-                              activeLink
-                                ? "border border-zinc-600 px-1 py-1 bg-zinc-700/30 rounded-lg"
-                                : ""
-                            } flex  gap-2 items-center cursor-pointer`}
-                          >
-                            <h1
-                              className={`  tracking-tight font-medium text-3xl ${
-                                activeLink ? "text-white" : "text-white "
-                              }`}
+                    <div
+                      onClick={() => setMenu(!menu)}
+                      className="absolute top-4 right-6 border-2 lg:hidden flex items-center text-xl p-2 text-white font-semibold rounded-md  border-zinc-700"
+                    >
+                      <RxCross1 className="text-sm" />
+                    </div>
+                    {navItems.map((val) => {
+                      const activeLink = pathname == val.link;
+                      return (
+                        <div key={val.id}>
+                          <Link href={val.link}>
+                            <motion.p
+                              animate={{ y: -30, opacity: [0, 1] }}
+                              transition={{ ease: "easeOut", duration: 0.6 }}
+                              whileTap={{ scale: 0.9 }}
+                              className={`${
+                                activeLink
+                                  ? "border border-zinc-600 px-1 py-1 bg-zinc-700/30 rounded-lg"
+                                  : ""
+                              } flex  gap-2 items-center cursor-pointer`}
                             >
-                              {val.title}
-                            </h1>
-                          </motion.li>
-                        </Link>
-                      </div>
-                    );
-                  })}
-                </motion.ul>
+                              <h1
+                                className={`  tracking-tight font-medium text-3xl ${
+                                  activeLink ? "text-white" : "text-white "
+                                }`}
+                              >
+                                {val.title}
+                              </h1>
+                            </motion.p>
+                          </Link>
+                        </div>
+                      );
+                    })}
+                  </motion.div>
+                </AnimatePresence>
               </>
             )}
           </div>

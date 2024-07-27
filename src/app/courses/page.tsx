@@ -28,7 +28,7 @@ const Page = () => {
           particleColor="#FFFFFF"
         />
       </div>
-      <div className="relative">
+      <div className="relative sm:flex hidden">
         <motion.img
           drag
           dragSnapToOrigin={true}
@@ -66,33 +66,35 @@ const Page = () => {
         />
       </div>
       <div className="border-b-2 border-zinc-800 h-[60vh] w-full flex justify-center items-center">
-        <div className="gap-4 flex flex-col justify-center items-center ">
+        <div className="gap-4 flex flex-col justify-center sm:text-left text-center items-center ">
           <div className="font-normal flex gap-2 items-center">
             <h1 className="font-normal text-zinc-300">Home</h1>
             <FaArrowRightLong className="text-white text-sm" />
             <h1 className="text-white font-medium">Courses</h1>
           </div>
-          <h1 className="text-5xl font-bold w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500">
+          <h1 className="text-2xl sm:text-5xl font-bold w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500">
             Browse All Our Courses
           </h1>
-          <h2 className="tracking-wider text-zinc-300 text-center w-9/12">
+          <h2 className="tracking-wider text-zinc-300 text-xs sm:text-md text-center w-9/12">
             Check out our World Class Courses Below. From Web Design to Video
             Editing you ll find all kinds of Courses.
           </h2>
         </div>
       </div>
       <div className="flex justify-center  items-center">
-        <div className="h-fit py-40 gap-8 flex flex-col justify-between items-center">
-          <div className="flex w-full justify-between items-center text-white">
-            <h1 className="text-xl text-zinc-300 font-medium">All Courses</h1>
+        <div className="h-fit py-20 sm:py-40 gap-8 flex flex-col justify-between items-center">
+          <div className="flex w-full justify-around md:justify-between items-center text-white">
+            <h1 className="text-md sm:text-xl text-zinc-300 font-medium">
+              All Courses
+            </h1>
             <div className="flex bg-zinc-900 border-[1px] border-zinc-700 rounded-md cursor-pointer items-center gap-2 px-[6px] py-1 ">
-              <CiSearch className="text-lg text-white font-bold" />
+              <CiSearch className="text-md sm:text-lg text-white font-bold" />
               <input
                 type="text"
                 id="search"
                 autoComplete="off"
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="bg-transparent outline-none text-zinc-400 py-1 px-2"
+                className="bg-transparent outline-none text-sm sm:text-md  text-zinc-400 py-1 px-0 sm:px-2"
                 placeholder="Search Courses..."
               />
               <p className="border-2 text-xs px-[0.4rem] py-[0.1rem] text-zinc-500 font-semibold rounded-md  border-zinc-700">
@@ -100,7 +102,7 @@ const Page = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-rows-2 grid-cols-3 gap-8 justify-center  items-center">
+          <div className="md:grid md:grid-rows-2 md:grid-cols-3 flex flex-wrap gap-8 justify-center  items-center">
             {Courses.filter((val) => {
               if (searchTerm == "") {
                 return val;
