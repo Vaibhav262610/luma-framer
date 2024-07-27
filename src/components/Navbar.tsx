@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import { IoReorderThree } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
 
@@ -88,7 +88,12 @@ const Navbar = () => {
               </ul>
             ) : (
               <>
-                <ul className="absolute top-0 left-0 z-[20] bg-black w-full h-screen flex flex-col items-center justify-center gap-8">
+                <motion.ul
+                  initial={{ y: 1000 }}
+                  animate={{ backgroundColor: "black", y: 0 , opacity : [0,1] }}
+                  transition={{ duration: 0.4, ease: easeInOut }}
+                  className="absolute top-0 left-0 z-[20] bg-black w-full h-screen flex flex-col items-center justify-center gap-8"
+                >
                   <div
                     onClick={() => setMenu(!menu)}
                     className="absolute top-4 right-6 border-2 lg:hidden flex items-center text-xl p-2 text-white font-semibold rounded-md  border-zinc-700"
@@ -122,7 +127,7 @@ const Navbar = () => {
                       </div>
                     );
                   })}
-                </ul>
+                </motion.ul>
               </>
             )}
           </div>
