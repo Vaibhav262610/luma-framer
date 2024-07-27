@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const Statistcal = () => {
   return (
     <>
-      <div className="h-screen bg-red-400 w-full hidden sm:flex justify-center items-center ">
+      <div className="h-screen w-full hidden sm:flex justify-center items-center ">
         <div className="border flex border-zinc-800 rounded-lg py-10 px-10 bg-gradient-to-r from-zinc-950 to-white/10">
           <div className="flex flex-col gap-3">
             <h1 className="font-bold text-emerald-300 text-sm">ACHIEVEMENTS</h1>
