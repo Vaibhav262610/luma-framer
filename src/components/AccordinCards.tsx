@@ -31,16 +31,16 @@ const AccordinCards = () => {
 
   return (
     <>
-      <div className="flex flex-col">
+      <div className="flex flex-col sm:gap-0 gap-2">
         {data.map((val) => {
           return (
             <div
               key={val.id}
-              className=" border rounded-xl py-1 bg-gradient-to-r from-gray-100/5 to-black border-zinc-700 w-[35rem] px-8 "
+              className=" border rounded-xl py-1 bg-gradient-to-r from-gray-100/5 to-black border-zinc-700 w-auto sm:w-[35rem] px-8 "
             >
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
-                  <AccordionTrigger className="text-white">
+                  <AccordionTrigger className="text-xs sm:text-md text-white">
                     {val.question}
                   </AccordionTrigger>
                   <hr className="border-zinc-700" />

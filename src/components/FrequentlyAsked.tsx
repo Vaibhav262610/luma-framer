@@ -6,13 +6,13 @@ import QuestonCard from "./QuestionCard";
 const FrequentlyAsked = () => {
   return (
     <>
-      <div className="h-fit bg-green-500 w-auto flex flex-col  ">
+      <div className="h-fit w-auto flex flex-col  ">
         <div className="flex flex-col justify-center items-center mt-20 gap-4">
           <FaRegFaceSmileWink className="text-2xl" />
           <h1 className="uppercase font-bold tracking-wider text-xs text-emerald-300">
             AMAZING BENEFITS
           </h1>
-          <h1 className="text-4xl text-white">
+          <h1 className="text-4xl sm:text-left text-center text-white">
             Stunning Benefits of our Courses
           </h1>
           <h2 className="text-zinc-300 text-md w-auto text-center">
@@ -23,24 +23,23 @@ const FrequentlyAsked = () => {
         <div className="w-auto flex flex-col gap-12 justify-center mt-12 items-center">
           <div className="w-auto px-4 gap-4 flex flex-col justify-center ">
             <h1 className="text-zinc-400 font-bold">General Questions</h1>
-            <div className="flex gap-4 justify-center">
+            <div className="flex sm:flex-row flex-col gap-4 justify-center">
               <AccordinCards />
               <AccordinCards />
             </div>
           </div>
-          <div className="w-auto px-4 gap-4 flex flex-col  justify-center ">
+          <div className="w-auto px-4 gap-4 flex flex-col justify-center ">
             <h1 className="text-zinc-400 font-bold">
               Payment Related Questions
             </h1>
-            <div className="flex gap-4 justify-center">
+            <div className="flex sm:flex-row flex-col gap-4 justify-center">
               <AccordinCards />
               <AccordinCards />
-            </div>
-            <div>
-              <QuestonCard />
             </div>
           </div>
-          <div></div>
+          <div className="pb-8">
+            <QuestonCard />
+          </div>
         </div>
       </div>
     </>

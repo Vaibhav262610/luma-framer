@@ -60,36 +60,42 @@ const Page = () => {
     <>
       <Navbar />
       <div className="h-fit flex-col pt-48 w-full flex justify-center items-center">
-        <div className="flex flex-col gap-1 w-auto ">
+        <div className="flex flex-col justify-center items-center gap-1 w-auto ">
           <h1 className="text-sm tracking-wider uppercase w-fit font-bold text-emerald-300">
             GET ACCESS TO ALL COURSES
           </h1>
-          <h1 className="text-[3rem] tracking-tight font-black w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-600">
+          <h1 className="text-4xl  sm:text-[3rem] tracking-tight sm:text-left text-center  font-black w-fit text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-600">
             Get All Access Pass Today!
           </h1>
-          <h1 className="text-lg w-8/12 leading-loose text-zinc-400">
+          <h1 className="text-sm sm:text-lg w-11/12 sm:text-left text-center sm:w-8/12 leading-loose text-zinc-400">
             Join today and get discounted access to all our courses. With our
             All Access Pass, you&apos;ll have early access to courses and
             exclusive VIP content for members.
           </h1>
-          <div className="flex justify-between py-12">
-            <div className="flex gap-1  items-center">
-              <FaRegStar className="text-xl text-emerald-300" />
-              <h1 className="text-zinc-200">Save 50% when billed yearly!</h1>
+          <div className="flex justify-between sm:gap-0 gap-10 py-12">
+            <div className="flex gap-1 items-center">
+              <FaRegStar className="text-sm sm:text-xl text-emerald-300" />
+              <h1 className="text-sm sm:text-md text-zinc-200">
+                Save 50% when billed yearly!
+              </h1>
             </div>
             <div className="text-white flex gap-1  items-center">
               <Switch
                 onClick={() => setBlling(!billing)}
-                className={`${billing ? "bg-green-300" : "bg-gray-600"} `}
+                className={`${billing ? "bg-green-300 " : "bg-gray-600"} `}
               />
               {billing ? (
-                <h1 className="text-lg font-medium">Billed Yearly </h1>
+                <h1 className="text-sm sm:text-lg font-medium">
+                  Billed Yearly{" "}
+                </h1>
               ) : (
-                <h1 className="text-lg font-medium">Billed Monthly</h1>
+                <h1 className="text-sm sm:text-lg font-medium">
+                  Billed Monthly
+                </h1>
               )}
             </div>
           </div>
-          <div className="flex items-center justify-center gap-8">
+          <div className="flex items-center flex-col flex-wrap sm:flex-row justify-center gap-8">
             {pricingData.map((val) => {
               return (
                 <div
@@ -99,19 +105,33 @@ const Page = () => {
                   <h1 className="text-gray-200 text-md uppercase font-medium ">
                     {val.data}
                   </h1>
-                  <h1 className="text-4xl text-white font-semibold">
+                  <h1 className="text-3xl sm:text-4xl text-white font-semibold">
                     $ {billing ? val.yearlyPrice : val.price} /{" "}
                     {billing ? yearly : monthly}
                   </h1>
-                  <h2 className="text-zinc-400 w-[21rem]">{val.desc}</h2>
-                  <div className="my-12 border-t w-52 border-zinc-700"></div>
+                  <h2 className="text-sm sm:text-md text-zinc-400 w-[18rem] sm:w-[21rem]">
+                    {val.desc}
+                  </h2>
+                  <div className="my-6 sm:my-12 border-t w-52 border-zinc-700"></div>
                   <ul className="flex gap-3 flex-col">
-                    <li className="text-md text-zinc-400">{val.item1}</li>
-                    <li className="text-md text-zinc-400">{val.item2}</li>
-                    <li className="text-md text-zinc-400">{val.item3}</li>
-                    <li className="text-md text-zinc-400">{val.item4}</li>
-                    <li className="text-md text-zinc-600">{val.item5}</li>
-                    <li className="text-md text-zinc-600">{val.item6}</li>
+                    <li className="text-sm sm:text-md text-zinc-400">
+                      {val.item1}
+                    </li>
+                    <li className="text-sm sm:text-md text-zinc-400">
+                      {val.item2}
+                    </li>
+                    <li className="text-sm sm:text-md text-zinc-400">
+                      {val.item3}
+                    </li>
+                    <li className="text-sm sm:text-md text-zinc-400">
+                      {val.item4}
+                    </li>
+                    <li className="text-sm sm:text-md text-zinc-600">
+                      {val.item5}
+                    </li>
+                    <li className="text-sm sm:text-md text-zinc-600">
+                      {val.item6}
+                    </li>
                   </ul>
                   <div className="flex mt-8 cursor-pointer bg-emerald-400 font-semibold w-auto gap-28 justify-end px-4 py-3 rounded-md text-black items-center ">
                     <button>Join Today</button>

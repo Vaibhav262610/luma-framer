@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex z-[99]  fixed w-full justify-center pb-[0.4px] bg-zinc-900/30 backdrop-blur border-zinc-700 border-b">
+      <div className="flex z-50 fixed w-full justify-center pb-[0.4px] bg-zinc-900/30 backdrop-blur border-zinc-700 border-b">
         <div className="flex items-center w-full px-6 xl:max-w-[70%] justify-between py-3">
           <Link href="/">
             <div className="">
@@ -98,9 +98,8 @@ const Navbar = () => {
                       opacity: 1,
                     }}
                     exit={{ x: 500, opacity: 0 }}
-                    
                     transition={{ duration: 0.3, ease: easeOut }}
-                    className="absolute top-0 left-0 z-[20] bg-black w-full h-screen flex flex-col items-center justify-center gap-8"
+                    className="absolute top-0 left-0 z-0 bg-black w-full h-screen flex flex-col items-center justify-center gap-8"
                   >
                     <div
                       onClick={() => setMenu(!menu)}
