@@ -89,8 +89,8 @@ const Navbar = () => {
             ) : (
               <>
                 <motion.ul
-                  initial={{ y: 1000 }}
-                  animate={{ backgroundColor: "black", y: 0 , opacity : [0,1] }}
+                  initial={{ x: 500 }}
+                  animate={{ backgroundColor: "black", x: 0 , opacity : [0,1] }}
                   transition={{ duration: 0.4, ease: easeInOut }}
                   className="absolute top-0 left-0 z-[20] bg-black w-full h-screen flex flex-col items-center justify-center gap-8"
                 >
